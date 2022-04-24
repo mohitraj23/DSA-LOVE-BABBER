@@ -7,10 +7,16 @@ int main()
         int i,j;
       for(i=1;i<=n;i++)
       {
-          for(j=1;j<=i;j++)
+          for(j=i;j<=n;j++)
           {
-              if( j==1 || i==n || j==i)
+              if(i==1)
               cout<<j<<" ";
+
+              else if(j==i)
+              cout<<i<<" ";
+
+              else if(j==n)
+              cout<<n<<" ";
 
               else
               cout<<"  ";
