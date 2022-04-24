@@ -3,18 +3,26 @@ using namespace std;
 
 int main()
 {
-    int n=5, k=0;
+    int n=6;
+    int row,col;
 
-    for(int row =1; row<=n; row++)
+    for(row =1; row<=n; row++)
     {
-        for(int col=1; col<=n+row; col++)
+        for(col=row; col<n; col++)
         {
-            if(col == n-row+1 || col == n-1+row)
+            cout<<" ";
+
+        }
+        for(col=1; col<=2*row-1; col++)
+        {
+            if(col==1 || col==2*row-1 || row==n)
             {
                 cout<<"*";
             }
             else{
                 cout<<" ";
+            }
+        }    
                 if(row==n)
                 {
                     if(col== row +2)
@@ -22,8 +30,6 @@ int main()
                         cout<<"*";
                     }
                 }
-            }
-        }
         cout<<endl;
     }
     return 0;
