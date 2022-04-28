@@ -99,23 +99,24 @@ bool checkPalindrome(int arr[], int n)
     return true;
 }
 
+//Kadane's Algo:-
 int getMaxSubarraySum(int arr[], int n){
-    int maxSF = INT_MIN;
-    int maxEH = 0;
+    int ans = INT_MIN;
+    int sum = 0;
 
     for(int i=0; i<n; i++)
     {
         //include current element
-        maxEH = maxEH + arr[i];
+        sum = sum + arr[i];
         
         //update the ans
-        maxSF = max(maxSF, maxEH);
+        ans = max(ans, sum);
 
         //if max ending here is 0, then don't include
-        if(maxEH < 0)
-          maxEH = 0;
+        if(sum < 0)
+          sum = 0;
     }
-    return maxSF;
+    return ans;
 }
 
 int main()
