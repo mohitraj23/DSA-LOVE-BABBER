@@ -47,6 +47,7 @@ void SwapAlternates(int arr[], int n)
     }
 }
 
+//sort 0's , 1's , 2's
 int sortZeroOneTwo(int arr[], int n)
 {
     int one=0, zero=0, two=0;
@@ -82,6 +83,7 @@ int sortZeroOneTwo(int arr[], int n)
     return 0;
 }
 
+//palindrome
 bool checkPalindrome(int arr[], int n)
 {
     int i=0;
@@ -120,7 +122,19 @@ int getMaxSubarraySum(int arr[], int n){
 }
 
 
-//Unique number of occurrences
+//Move all -ve no. to side of array
+
+void MoveNegative(int arr[], int n)
+{
+    int j=0;
+    for(int i=0; i<n; i++)
+    {
+        if (arr[i] < 0) {
+                swap(arr[i], arr[j]);
+            j++;
+        }
+    }
+}
 
 
 int main()
@@ -130,16 +144,24 @@ int main()
     //cout<<"Maximum value is: "<<getMaxFromArray(arr,6)<<endl;
     //cout<<"Minmum value is: "<<getMinFromArray(arr,6)<<endl;
     //SwapAlternates(arr,6);
-    int arr[] = {0,1,2,1,0,2};
+    //int arr[] = {0,1,2,1,0,2};
     //cout<<sortZeroOneTwo(arr,6);
     //int arr[] = {1,2,3,3,2,1};
     //cout<<"Palindrome or not: "<<checkPalindrome(arr,6)<<endl;
-    cout<<"Max Subarray sum is "<<getMaxSubarraySum(arr,6)<<endl;
+    //cout<<"Max Subarray sum is "<<getMaxSubarraySum(arr,6)<<endl;
     //cout<<"Reverse of array: ";
     //for(int i=0; i<6; i++)
     //{
     //    cout<<arr[i] <<" ";
     //}
+
+    int arr[] = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+    cout<<"Move negative no.: "<<endl;
+    MoveNegative(arr, 9);
+    for(int i=0; i<9; i++)
+    {
+        cout<<arr[i] <<" ";
+    }
     cout<<endl;
     return 0;
 }
