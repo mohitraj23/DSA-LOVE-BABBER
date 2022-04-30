@@ -98,6 +98,8 @@ void transpose(int arr2[3][3], int m, int n)
     }
 }
 
+//Reverse for rotate
+
 int main()
 {
     //creation
