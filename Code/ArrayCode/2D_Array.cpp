@@ -20,9 +20,9 @@ bool search(int arr[3][3], int target, int row, int col){
 //Row wise sum
 void rowSum(int arr2[3][3], int row, int col)
 {
-    int sum=0;
     for(int i=0; i<row; i++)
     {
+        int sum=0;
         //for each row
         for(int j=0; j<col; j++)
         {
@@ -37,18 +37,53 @@ void rowSum(int arr2[3][3], int row, int col)
 //Column wise sum
 void colSum(int arr2[3][3], int row, int col)
 {
-    int sum=0;
     for(int i=0; i<col; i++)
     {
+        int sum=0;
         //for each row
         for(int j=0; j<row; j++)
         {
             sum = sum + arr2[j][i];
-            
         }
         cout<<sum<<" ";
         cout<<endl;
     }
+}
+
+//Max Row wise
+int rowMax(int arr2[3][3], int row, int col)
+{
+    int maxi = INT_MIN;
+    for(int i=0; i<row; i++)
+    {
+        int sum=0;
+        //for each row
+        for(int j=0; j<col; j++)
+        {
+            sum = sum + arr2[i][j];   
+        }
+        maxi = max(maxi, sum);
+    }
+    return maxi;
+    cout<<endl;
+}
+
+//Max column wise
+int colMax(int arr2[3][3], int row, int col)
+{
+    int maxi = INT_MIN;
+    for(int i=0; i<col; i++)
+    {
+        int sum=0;
+        //for each row
+        for(int j=0; j<row; j++)
+        {
+            sum = sum + arr2[j][i]; 
+        }
+        maxi = max(maxi, sum);
+    }
+    return maxi;
+    cout<<endl;
 }
 
 //transpose 
@@ -87,8 +122,8 @@ int main()
         cout<<endl;
     }
     */
-   transpose(arr2, 3,3);
-    cout<<endl;
+    transpose(arr2, 3,3);
+    cout<<"Transpose Matrix is: "<<endl;
 
     //Print matrix
     for(int i=0; i<n; i++)
@@ -117,13 +152,16 @@ int main()
         cout<<endl;
     }
 */
-    cout<<"Ok"<<endl<<endl;
+    cout<<"Row wise sum is: "<<endl;
     rowSum(arr2,3, 3);
     cout<<endl;
+    cout<<"Col wise sum is: "<<endl;
     colSum(arr2,3, 3);
     cout<<endl;
-    
-     
+    cout<<"Col max is: "<<colMax(arr2,3,3);
+    cout<<endl;
+    cout<<"Row max is: "<<rowMax(arr2, 3, 3);
+    cout<<endl;
     cout<<"Search 9: "<<search(arr2, 9, 3, 3)<<endl;
     return 0;
 }
