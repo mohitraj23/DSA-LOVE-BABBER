@@ -1,56 +1,53 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int main() {
-int n = 5;
-  for(int row = 1 ; row <= n ; row++)
+void transposeMatrix(int arr[2][2],int row ,int col)
+{
+    int n = 2;
+    for(int i = 0 ; i< row ; i++ )
     {
-      if(row == 1)
-      {
-        for(int j = 1 ; j <= 2 * n ; j++)
-          {
-            cout<<"*";
-          }
-      }
-      else{
-        for(int j = 1 ; j <= n-row+1 ; j++)
-          {
-            cout<<"*";
-          } 
-        for(int j = 1 ; j<= 2*row-2 ; j++)
-          {
-            cout<<" ";
-          }
-        for(int j = 1 ; j <= n-row+1 ; j++)
-          {
-            cout<<"*";
-          } 
-      }
-      cout<<endl;
-      }  
-      for(int row = 1; row<= n ; row++)
+        for(int j = 0 ; j< i ; j++)
         {
-          if(row == n)
-          {
-          for(int j = 1 ; j <(n/2)-1 ; j++)
-          {
-            cout<<"*";
-          }
-          }
-          for(int j = 1; j<= row ; j++)
-            {
-              cout<<"*";
-            }
-          for(int j = 1; j<= 2 *n - 2 * row ; j++)
-            {
-              cout<<" ";
-            }
-          for(int j = 1; j<= row ; j++)
-            {
-              cout<<"*";
-            }
-         cout<<endl; 
+          swap(arr[i][j],arr[j][i]);
         }
-    
-  return 0;
+    }
+}
+void printArray(int arr[2][2],int n)
+{
+    for(int i = 0; i<n ; i++)
+    {
+        for(int j = 0 ; j<n ; j++)
+        {
+            cout<<" "<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+//Reverse for rotate transpose matrix
+void ReverseCol(int arr[2][2], int m , int n)
+{
+    for(int i=0; i<m; i++)
+    {
+    int start=0;
+    int end= n-1;
+
+    while(start<end)
+    {
+        swap(arr[i][start], arr[i][end]);
+        start++;
+        end--;
+    }
+}
+}
+int main()
+{
+int n=2;    
+int arr[2][2] = {1,2,3,4};
+transposeMatrix(arr,2,2);
+printArray(arr , 2);
+cout<<"Reverse kreing  "<<endl;
+ReverseCol(arr , 2 , 2);
+printArray(arr , 2);
+
+
+return 0;
 }

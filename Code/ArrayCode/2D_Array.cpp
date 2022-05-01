@@ -98,7 +98,35 @@ void transpose(int arr2[3][3], int m, int n)
     }
 }
 
-//Reverse for rotate
+//Reverse for rotate transpose matrix
+void reverseCol(int arr[3][3], int m , int n)
+{
+    for(int i=0; i<m; i++)
+    {
+    int start=0;
+    int end= n-1;
+
+    while(start<end)
+    {
+        swap(arr[i][start], arr[i][end]);
+        start++;
+        end--;
+    }
+}
+}
+
+//for print matrix
+void printArray(int arr2[3][3],int n)
+{
+    for(int i = 0; i<n ; i++)
+    {
+        for(int j = 0 ; j<n ; j++)
+        {
+            cout<<" "<<arr2[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
 
 int main()
 {
@@ -124,9 +152,9 @@ int main()
         cout<<endl;
     }
     */
-    transpose(arr2, 3,3);
-    cout<<"Transpose Matrix is: "<<endl;
 
+
+/*
     //Print matrix
     for(int i=0; i<n; i++)
     {
@@ -138,7 +166,7 @@ int main()
         cout<<endl;
     }
     
-/*
+
     // Print column wise sum
     int sum=0;
     for(int i=0; i<n; i++)
@@ -165,5 +193,13 @@ int main()
     cout<<"Row max is: "<<rowMax(arr2, 3, 3);
     cout<<endl;
     cout<<"Search 9: "<<search(arr2, 9, 3, 3)<<endl;
+
+    cout<<"Transpose Matrix is: "<<endl;
+    transpose(arr2, 3,3);
+    printArray(arr2 , 3);
+
+    cout<<"Reverse kreing  "<<endl;
+    reverseCol(arr2 , 3 , 3);
+    printArray(arr2 , 3);
     return 0;
 }
