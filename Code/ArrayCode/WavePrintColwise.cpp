@@ -25,5 +25,5 @@ int main()
  
     WavePrint(3, 3, arr);
  
-    return 0;
+    return 0; 
 }
