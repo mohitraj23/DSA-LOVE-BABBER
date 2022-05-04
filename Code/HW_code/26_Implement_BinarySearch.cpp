@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//LINK:- https://leetcode.com/problems/binary-search/submissions/
 
 //STL Function of Binary Search
 //binary_search(arr, arr+n, target);
