@@ -1,4 +1,4 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 void transposeMatrix(int arr[2][2],int row ,int col)
 {
