@@ -1,4 +1,4 @@
-//LINK:-https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
+//Link:-https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1/
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -67,9 +67,10 @@ int main()
     int arr[]={2,3,4,4,4,7,8,9};
     int n=8;
     int target=4;
+    int ans =1;
     
-    cout<<firstOcc(arr, n, target)<<endl;
-    cout<<lastOcc(arr, n, target)<<endl;
+    ans=lastOcc(arr, n, target) - firstOcc(arr, n, target) + 1;
+    cout<<ans<<endl;
 
     return 0;
 }
