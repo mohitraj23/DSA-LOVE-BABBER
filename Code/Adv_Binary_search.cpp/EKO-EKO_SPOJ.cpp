@@ -13,7 +13,7 @@ bool isPossibleSolution(int mid, int arr[], int n, int target) {
         if(arr[i] > mid)
             diff = arr[i] - mid;
 
-        sum = sum + diff;
+        sum = sum + diff; 
     }
 
     if(sum >= target)
