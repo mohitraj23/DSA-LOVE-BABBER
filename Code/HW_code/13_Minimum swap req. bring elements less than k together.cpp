@@ -35,7 +35,7 @@ int minSwap(int arr[], int n, int k)
 
 int main()
 {
-    int arr[] = {1,2,3,3,2,1};
-    cout<<"minimum Swap is : "<<minSwap(arr,6, 2)<<endl;
+    int arr[] = {2,1,5,6,3};
+    cout<<"minimum Swap is : "<<minSwap(arr,5, 3)<<endl;
     return 0;
 }
