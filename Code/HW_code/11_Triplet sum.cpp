@@ -1,27 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//palindrome
-bool checkPalindrome(int arr[], int n)
+void TripletSum(int arr[], int n , int target)
 {
-    int i=0;
-    int j=n-1;
-    while(i<j)
-    {
-        if(arr[i]==arr[j])
+    int pairSum = 0;
+    int i = 0;
+    int j = i+1;
+    int k = i+2;
+    while(i<n && j<n && k<n)
         {
+            pairSum = arr[i]+arr[j]+arr[k];
+            if(pairSum == target)
+            {
+                cout<<arr[i]<<" "<<arr[j]<<" "<<arr[k];
+            }
             i++;
-            j--;
-        }
-        else
-        return false;
+            j++;
+            k++;
+        }    
     }
-    return true;
-}
 
 int main()
 {
-    int arr[] = {1,2,3,3,2,1};
-    cout<<"Palindrome or not: "<<checkPalindrome(arr,6)<<endl;
+    int arr[6] = {1,2,3,4,5,6};
+    TripletSum(arr,6,6);
     return 0;
 }

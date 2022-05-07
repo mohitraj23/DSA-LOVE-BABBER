@@ -1,29 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void pairSum(int arr[], int n, int target)
+void PairSum(int arr[], int n , int target)
 {
-    sort(arr, arr+n);
-    int i=0;
-    int j=n-1;
-    while(i<j)
-    {
-    if(arr[i] + arr[j] == target)
-    cout<<i<<" "<<j<<endl;
-
-    else if(arr[i] + arr[j] > target)
-    j--;
-
-    else
-    i++;
-}
-}
+    int ans = 0;
+    int i = 0;
+    int j = i+1;
+    while(i<n && j<n)
+        {
+            ans = arr[i]+arr[j];
+            if(ans == target)
+            {
+                cout<<arr[i]<<" "<<arr[j];
+            }
+            i++;
+            j++;
+        }    
+    }
 
 int main()
 {
-    int arr[] = {8,6,1,5,4};
-    int n=5;
-    int target=5;
-    pairSum(arr, n, target);
+    int arr[6] = {1,2,2,4,5,6};
+    PairSum(arr,6,6);
     return 0;
 }
