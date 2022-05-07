@@ -1,27 +1,19 @@
 #include<iostream>
 using namespace std;
 
-//palindrome
-bool checkPalindrome(int arr[], int n)
+int findUnique(int *arr, int size)
 {
-    int i=0;
-    int j=n-1;
-    while(i<j)
-    {
-        if(arr[i]==arr[j])
-        {
-            i++;
-            j--;
-        }
-        else
-        return false;
+   	int ans = 0;
+    
+    for(int i = 0; i<size; i++) {
+        ans = ans^arr[i];
     }
-    return true;
+    return ans;
 }
 
 int main()
 {
     int arr[] = {1,2,3,3,2,1};
-    cout<<"Palindrome or not: "<<checkPalindrome(arr,6)<<endl;
+    cout<<"findUnique: "<<findUnique(arr,6)<<endl;
     return 0;
 }
