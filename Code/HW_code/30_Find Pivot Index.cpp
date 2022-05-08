@@ -1,5 +1,3 @@
-//Link:-https://leetcode.com/problems/find-pivot-index/
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -24,6 +22,6 @@ int getPivot(int arr[], int n) {
 }
 
 int main() {
-    int arr[5] = {1, 3, 8, 10, 17};
+    int arr[5] = {8, 10, 17, 1, 3};
     cout << "Pivot is " << getPivot(arr, 5) << endl;
 }
