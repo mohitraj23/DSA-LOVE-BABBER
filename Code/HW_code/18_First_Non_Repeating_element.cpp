@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int firstRepeating(int arr[], int n)
+int firstNonRepeating(int arr[], int n)
 {
     //step1: store count of numbers
     unordered_map<int,int> count;
@@ -25,7 +25,7 @@ int main()
 {
     int arr[]={1,2,3,5,9,3};
     int n = 6;
-    cout<<firstRepeating(arr, n);
+    cout<<firstNonRepeating(arr, n);
 
     return 0;
 }
