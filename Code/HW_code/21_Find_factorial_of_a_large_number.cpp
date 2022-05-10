@@ -15,9 +15,9 @@ int largeFactorial(int num)
     return ans;
 }
 
- int main()
+ int main() 
  {
-     int num=5;
+     int num=10;
      cout<<largeFactorial(num);
 
      return 0;
