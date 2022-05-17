@@ -1,10 +1,10 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 int getLength(char arr[])
 {
     int length=0;
-    int index=o;
+    int index=0;
     while(arr[index] != '\0')
     {
         length++;
@@ -24,7 +24,8 @@ int main()
 
     //print
     cout<<name<<endl; 
-    cout<<name2<<endl;
+    cout<<strlen(name)<<endl;
+    cout<<strcmp(name, name2)<<endl;
 
     return 0;
 }
