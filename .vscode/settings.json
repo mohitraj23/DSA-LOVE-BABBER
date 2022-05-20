@@ -10,7 +10,8 @@
         "streambuf": "cpp",
         "xiosbase": "cpp",
         "xstring": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "xutility": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
