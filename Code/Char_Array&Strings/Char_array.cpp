@@ -13,19 +13,34 @@ int getLength(char arr[])
     return length;
 }
 
+void reverse(char arr[])
+{
+    int n = strlen(arr);
+    int s = 0, e = n-1;
+    
+    while(s<=e)
+    {
+        swap(arr[s], arr[e]);
+        s++;
+        e--;
+    }
+}
+
 int main()
 {
     //creation
-    char name[10];
-    char name2[10]="Mohit";
+    char name1[10];
+    char name[10]="Mohit";
 
     //input
-    cin>>name;
+    cin>>name1;
 
     //print
     cout<<name<<endl; 
     cout<<strlen(name)<<endl;
-    cout<<strcmp(name, name2)<<endl;
+    cout<<strcmp(name, name1)<<endl;
+    reverse(name);
+    cout<<"Reverse name is:"<<name<<endl;
 
     return 0;
 }
