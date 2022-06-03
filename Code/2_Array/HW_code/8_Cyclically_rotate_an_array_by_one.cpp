@@ -1,6 +1,6 @@
-//Cyclically rotate an array by one
 #include <bits/stdc++.h>
 using namespace std;
+//Cyclically rotate an array by one
 
 //User function Template for C++
 
