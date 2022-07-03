@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Stack {
 
     public:
@@ -112,11 +115,11 @@ int main() {
 
     // //top element
     // cout << st.top() << endl;
- 
-    // //remove element from top
+
     // st.pop();
 
     // //top element
     // cout << st.top() << endl;
+
     return 0;
 }
