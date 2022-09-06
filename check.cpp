@@ -1,33 +1,115 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
 using namespace std;
 
-
-bool isprime(int n)
-{
-    int count =0;
-        for(int i=1; i<=n; i++)
+//encapsulation
+class Human{
+    //Data member or properties
+    private:
+    int age;
+    // int weight;
+    // int height;
+    
+    //Member function or Behaviour
+    public:
+    int getage()
     {
-        if(n % i == 0)
-        count++;
+        int age=19;
+        return age;
     }
-     
-     if(count == 2)
-     return true;
-     
-     else 
-     return false;
+};
+int main()
+{
+    Human obj;
+    cout<<sizeof(obj)<<endl;
+    
+    Human *objp = new Human();
+    cout<<sizeof(objp)<<endl;
+    cout<<objp->getage()<<endl;
+    
+    // cout<<obj.getage()<<endl;
+    return 0;
 }
+
+
+
+
+
+
+
+//inheritance
+
+class Human{
+    //Data member or properties
+    public:
+    
+    int age;
+    // int weight;
+    // int height;
+    
+    //Member function or Behaviour
+    public:
+    int getage()
+    {
+        int age=19;
+        return age;
+    }
+};
+
+class female:public Human
+{
+    //derived class
+};
+int main()
+{
+    // Human obj;
+    // cout<<sizeof(obj)<<endl;
+    
+    // Human *objp = new Human();
+    // cout<<sizeof(objp)<<endl;
+    // cout<<objp->getage()<<endl;
+    
+    // cout<<obj.getage()<<endl;
+    
+    female p;
+    cout<<p.getage();
+    return 0;
+}
+
+
+
+//single level inheritance
+class father
+{
+    public:
+    int age;
+    string name;
+
+    public:
+    int getage()
+    {
+        age= 19;
+        return age;
+    }
+
+};
+
+class Madhu: public father
+{
+
+};
+
+class Mohit: public father
+{
+    
+};
+
 
 int main()
 {
-    int n;
+    Mohit obj;
+    cout<<obj.getage();
+
     
-    cout<<"Enter Number: "<<endl;
-    cin>>n;
-    
-    isprime(n);
-    
-    
-   return 0;
+
+
 }
